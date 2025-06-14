@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>To Hadye</title>
+  <style>
+    body {
+      background: linear-gradient(to top left, #fef3c7, #ffe4e6);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+      text-align: center;
+    }
+
+    button {
+      background-color: #ef4444;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 12px;
+      font-size: 1.1em;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #dc2626;
+    }
+
+    .card {
+      background-color: #fff7ed;
+      padding: 40px 30px;
+      border-radius: 20px;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+      max-width: 600px;
+      margin-top: 30px;
+      opacity: 0;
+      transform: translateY(50px) scale(0.98);
+      pointer-events: none;
+    }
+
+    .card.show {
+      animation: fadeInUp 1s ease forwards;
+      pointer-events: auto;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px) scale(0.95);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    h1 {
+      font-size: 2em;
+      color: #b91c1c;
+    }
+
+    p {
+      font-size: 1.1em;
+      margin-top: 20px;
+      color: #374151;
+      line-height: 1.6;
+    }
+
+    /* Prank card styling */
+    .prank {
+      background-color: #ecfccb;
+    }
+
+    .prank h1 {
+      color: #16a34a;
+    }
+
+    .prank p {
+      color: #065f46;
+    }
+
+    @media (max-width: 500px) {
+      .card {
+        padding: 30px 20px;
+      }
+
+      h1 {
+        font-size: 1.6em;
+      }
+
+      p {
+        font-size: 1em;
+      }
+
+      button {
+        padding: 12px 24px;
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <button onclick="showMessage()">Click to Open</button>
+
+  <div class="card" id="messageCard">
+    <h1>Hadye…</h1>
+    <p>
+      I feel mad... and lost.<br/>
+      And I feel like you’re the same too.<br/><br/>
+      You keep going in circles, Hadye…<br/>
+      And you always end up putting everything on me.<br/><br/>
+      I carry the weight, but I’m tired. I’m confused. I’m hurt.<br/>
+      And deep down… I feel like I don’t deserve to be treated this way.<br/><br/>
+      Maybe I need space. Maybe we both do.<br/>
+      But I needed you to know this, honestly and from my heart i really really love u.
+      Goodbyes med ali 😉
+    </p>
+  </div>
+
+  <div class="card prank" id="prankCard">
+    <h1>😂 GOT YOU!</h1>
+    <p>
+      Just kidding, ya Hadye!<br/>
+      Id never leave you like that(Id leave u w a pdf tbh😉) but u gotta admitu dont love  this manipulator any more its fine okhti aadi taw nekber nansa <br/><br/>
+    </p>
+  </div>
+
+  <script>
+    function showMessage() {
+      const msg = document.getElementById('messageCard');
+      const prank = document.getElementById('prankCard');
+
+      msg.classList.add('show');
+
+      setTimeout(() => {
+        prank.classList.add('show');
+      }, 10000); // wait 
+    }
+  </script>
+
+</body>
+</html>
